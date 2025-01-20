@@ -5,6 +5,7 @@
 :root {
     --cor1: purple;
     --cor2: black;
+    --cor3: rgb(109, 109, 109); 
 }
 
 * {
@@ -17,92 +18,174 @@ header {
     font-family: "Raleway";
     padding: 25px;
     text-align: center;
-    background-color: violet;
+    pointer-events: none;
+    background-color: var(--cor2);
+}
+
+header h1 {
+    color: var(--cor1);
 }
 
 header > p{
     font-size: 25px;
     margin-top: 5px;
-    background-color: gray;
+    color: var(--cor1);
 }
 
 nav {
     font-size: 20px;
     font-family: "Raleway";
     text-align: center;
+    background-color: var(--cor2);
 }
 
 nav > a {
     margin: 10px;
     text-decoration: none;
-    border-radius: 6px;
-    transition-duration: .5s;
+    color: gray;
+    display: inline-block;
+    transition: .2s;
 }
 
-nav > a:hover {
-    
-    background-color: var(--cor2);
-    color: var(--cor1);
+nav a:hover {
+    transform: scale(1.05);
+    color: var(--cor1)
 }
 
 #sobre {
     padding-bottom: 100px;
     padding-top: 6px;
-    text-indent: 15px;
-    font-size: 20px;
     font-family: "Raleway";
-    background-color: aquamarine;
+    background-color: var(--cor2);
 }
 
-#sobre > p {
-    margin-top: 3px;
-    text-indent: 15px;
+#sobre h2 {
+    font-weight: 380;
+    font-size: 45px;
+    text-align: center;
+    padding: 20px;
+    color: var(--cor3);
+}
+
+
+#sobre p {
+    padding-top: 20px;
+    font-size: 40px;
+    font-weight: 300;
+    text-align: center;
+    color: var(--cor3);
 }
 
 #sobre > img {
     display: block;
-    margin-top: 15px;
-    margin-left: 15px;
-    margin-bottom: 15px;
     width: 20%;
+    margin: auto;
+    /* Animação abaixo */
+    position: relative; 
+    animation: deslizar 2s ease-in-out infinite alternate;
 }
 
 #projetos {
-    padding-bottom: 300px;
-    padding-top: 6px;
-    text-indent: 10px;
-    font-size: 20px;
+    padding-bottom: 100px;
+    padding-top: 0px;
     font-family: "Raleway";
-    background-color: pink;
+    background-color: var(--cor2);
+    
+}
+
+#projetos h2 {
+    font-size: 45px;
+    font-weight: 380;
+    padding: 30px;
+    text-align: center;
+    color: var(--cor3);
 }
 
 #projetos > ul {
     margin-top: 20px;
+    font-weight: 300;
+    font-size: 35px;
     text-indent: 15px;
+    text-align: center;
+    color: var(--cor3);
 }
 
+#projetos > ul > li > abbs > a {    
+    color: gray;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+#projetos > ul > li > abbs > a:hover {
+    transform: scale(1.05);
+    color: var(--cor1)
+}
+
+
 #projetos > ul > img {
-    margin-left: 320px;
+    padding: 40px;
+    align-items: center;
     width: 25%;
 }
 
 #contato {
-    padding-top: 6px;
+    padding-top: 40px;
+    padding-bottom: 100px;
     text-indent: 10px;
-    font-size: 20px;
+    font-size: 30px;
     font-family: "Raleway";
-    background-color: brown;
+    background-color: var(--cor2);
 }
 
-#contato > form {
+#contato h2 {
+    text-align: center;
+    font-weight: 380;
+    color: var(--cor3);
+}
+
+#contato form {
     margin-top: 6px;
-    text-indent: 15px;
+    text-indent: 15px; 
+    text-align: center;
+    color: var(--cor3);
+}
+
+#contato > form > label {
+    display: block;
+    padding: 10px;
+    font-size: 25px;
+    
+}
+
+form input {
+    background-color: #fff;
+    border: 0;
+    border-radius: 5px;
+    outline: 0;
+    font-size: 20px;
+}
+
+#butan {
+    padding: 7px 30px;
 }
 
 
 footer {
     text-align: center;
-    font-size: 15px;
+    font-size: 25px;
     font-family: "Raleway";
-    background-color: green;
+    background-color: var(--cor2);
+    color: var(--cor3);
+}
+
+
+/* Animação */
+@keyframes deslizar{ 
+    0%{
+        left: 0;;
+    }
+    100% {
+        left: 20px;
+    }
 }
